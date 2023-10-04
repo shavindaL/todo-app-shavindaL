@@ -1,0 +1,19 @@
+.welcome {
+  @apply flex justify-between border-solid border-2 border-stroke rounded-lg;
+}
+
+.welcome p {
+  @apply text-normal font-regular;
+}
+
+.welcome link {
+  @apply text-magenta underline;
+}
+
+.welcome-text {
+  @apply px-2 py-6;
+}
+
+.welcome button{
+  @apply flex justify-start px-3 pt-4;
+}

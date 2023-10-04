@@ -1,0 +1,19 @@
+.sidebar {
+  @apply bg-purple h-screen w-72;
+}
+
+.sidebar-header{
+    @apply bg-light-purple flex justify-center content-center p-4;
+}
+
+.sidebar-pill {
+  @apply bg-light-purple flex w-64 pl-4 py-4 rounded-3xl mx-auto  items-center h-max;
+}
+
+.sidebar-pill p {
+  @apply font-regular text-white text-large h-5 ml-4;
+}
+
+.sidebar-pill img {
+  @apply h-min;
+}
