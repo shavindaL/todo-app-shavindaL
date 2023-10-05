@@ -29,12 +29,12 @@ This project was created as part of betalaunch's intern software engineer assign
 2. Copy code
 
     ```
-    https://github.com/shavindaL/todo-app-shavindaL
+    https://github.com/shavindaL-main/todo-app-shavindaL
     ```
 
 3. Navigate to the project direc
     ```
-    cd beta-launch-assignment\todo-app-shavindal
+    cd todo-app-shavindalL\todo-app-shavindal
     ```
 
 4. Install dependencies:
