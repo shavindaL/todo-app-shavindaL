@@ -4,6 +4,7 @@ import CustomPieChart from "./components/piechart";
 import Sidebar from "./components/sidebar";
 import Tasks from "./components/tasks";
 import Welcome from "./components/welcome";
+import TaskListContextProvider from "./context/TaskListContext";
 
 const Dashboard: React.FC = () => {
   return (
@@ -14,7 +15,9 @@ const Dashboard: React.FC = () => {
           <Header />
           <Welcome />
           <div className="flex w-full p-6">
-            <Tasks />
+            <TaskListContextProvider>
+              <Tasks />
+            </TaskListContextProvider>
             <div>
               <ActivityFeed />
               <CustomPieChart />

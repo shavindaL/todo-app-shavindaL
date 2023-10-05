@@ -30,8 +30,7 @@ const config: Config = {
         'stroke': 'rgba(208, 213, 221, 1)',
         'grey': 'rgba(117, 117, 117, 1)',
         'green': 'rgba(33, 150, 83, 1)',
-
-
+        'yellow': 'rgba(242, 201, 76, 1)',
       },
       backgroundColor: {
         'purple': 'rgba(51, 7, 79, 1)',
