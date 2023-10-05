@@ -1,0 +1,14 @@
+.piechart{
+    @apply w-full border-solid border-2 border-stroke rounded-lg mt-8 pb-10;
+}
+
+.legend{
+    @apply flex flex-col gap-2 justify-center px-10;
+}
+.legend-item{
+    @apply flex gap-2;
+}
+
+.legend-item div {
+  @apply w-4 h-4 rounded-full ;
+}

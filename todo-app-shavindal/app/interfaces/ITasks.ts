@@ -1,8 +1,9 @@
 export interface ITaskListContextProps {
-    tasks: ITask[];
+    tasks: ITaskListItemProps[];
     highPriorityCount: number;
     mediumPriorityCount: number;
     lowPriorityCount: number;
+    isLoading: boolean;
 };
 
 export interface ITaskListChildProps {
@@ -24,5 +25,9 @@ export interface ITaskListItemProps {
     priority: string;
     todo: string;
     completed: boolean;
-    createdAt: string;
+    date: string;
+    year: string;
+    month: string;
+    hours: string;
+    minutes: string;
 };
