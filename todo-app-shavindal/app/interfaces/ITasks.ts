@@ -3,6 +3,7 @@ export interface ITaskListContextProps {
     highPriorityCount: number;
     mediumPriorityCount: number;
     lowPriorityCount: number;
+    isLoading: boolean;
 };
 
 export interface ITaskListChildProps {

@@ -1,6 +1,6 @@
 'use client';
 
-import axios, { AxiosResponse } from "axios";
+import axios from "axios";
 import { createContext, useEffect, useState } from "react";
 import { ITask, ITaskListChildProps, ITaskListContextProps } from "../interfaces/ITasks";
 
@@ -11,11 +11,10 @@ const TaskListContextProvider = ({ children }: ITaskListChildProps) => {
     const [highPriorityCount, setHighPriorityCount] = useState<number>(0);
     const [mediumPriorityCount, setMediumPriorityCount] = useState<number>(0);
     const [lowPriorityCount, setLowPriorityCount] = useState<number>(0);
+    const [isLoading, setIsLoading] = useState<boolean>(false);
 
     useEffect(() => {
         fetchTasks();
-        console.log(tasks, 'at context file');
-
     }, []);
 
     const countTasskPriority = (tasks: ITask[]) => {
@@ -90,6 +89,7 @@ const TaskListContextProvider = ({ children }: ITaskListChildProps) => {
     }
 
     const fetchTasks = () => {
+        setIsLoading(true);
         axios
             .get('https://6363c8f68a3337d9a2e7d805.mockapi.io/api/to-do')
             .then(
@@ -100,10 +100,11 @@ const TaskListContextProvider = ({ children }: ITaskListChildProps) => {
                     setTasks(data);
                 }
             )
-            .catch(e => console.log(e));
+            .catch(e => console.log(e))
+            .finally(() => setIsLoading(false));
     };
     return (
-        <TaskListContext.Provider value={{ tasks, highPriorityCount, mediumPriorityCount, lowPriorityCount }}>
+        <TaskListContext.Provider value={{ tasks, highPriorityCount, mediumPriorityCount, lowPriorityCount, isLoading }}>
             {children}
         </TaskListContext.Provider>
     );

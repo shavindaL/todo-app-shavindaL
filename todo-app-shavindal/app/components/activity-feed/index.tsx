@@ -1,6 +1,12 @@
+'use client';
+import { TaskListContext } from "@/app/context/TaskListContext";
 import ActivityFeedItem from "./ActivityFeedItem";
+import { useContext } from "react";
 
 const ActivityFeed: React.FC = () => {
+    const taskContext = useContext(TaskListContext);
+    // const { tasks, isLoading } = taskContext!;
+
     const activityData = [
         {
             username: 'Kushantha Charuka',

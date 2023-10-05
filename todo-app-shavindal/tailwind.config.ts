@@ -41,6 +41,9 @@ const config: Config = {
         'red': 'rgba(235, 87, 87, 1)',
         'light-green': 'rgba(232, 245, 233, 1)',
         'grey': 'rgba(117, 117, 117, 1)'
+      },
+      screens: {
+        'xs': '320px',
       }
     },
   },

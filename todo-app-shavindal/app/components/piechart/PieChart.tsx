@@ -3,8 +3,6 @@ import { TaskListContext } from "@/app/context/TaskListContext";
 import { useContext } from "react";
 import { PieChart, Pie, Cell } from "recharts";
 
-
-const COLORS = [, ,];
 const PieChartComponent = () => {
     const taskContext = useContext(TaskListContext);
     const { lowPriorityCount, mediumPriorityCount, highPriorityCount } = taskContext!;

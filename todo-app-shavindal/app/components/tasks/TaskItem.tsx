@@ -1,8 +1,9 @@
+'use client'
 import { ITask } from "@/app/interfaces/ITasks";
 import Image from "next/image"
+import { useEffect, useState } from "react";
 
 const TaskItem: React.FC<ITask> = ({ id, createdBy, priority, todo, completed, createdAt }) => {
-
     let priorityImage = "";
     switch (priority) {
         case "LOW":
@@ -18,12 +19,13 @@ const TaskItem: React.FC<ITask> = ({ id, createdBy, priority, todo, completed, c
             priorityImage = "/assets/Priority-LOW.svg";
             break;
     };
+
     return (
         <div key={id} className="py-1 px-4">
-            <div className="flex justify-between items-center ">
+            <div className="flex justify-between items-center pb-3">
                 <div className="flex items-center">
                     <Image src={priorityImage} alt={""} width={20} height={20} />
-                    <p className="font-medium text-large mx-2">{todo}</p>
+                    <p className="font-medium text-large mx-2">{todo.slice(0, 40)}</p>
                 </div>
                 <div className="flex items-center ">
                     {completed ?
@@ -32,7 +34,7 @@ const TaskItem: React.FC<ITask> = ({ id, createdBy, priority, todo, completed, c
                     <p className="w-max text-grey">{createdAt}</p>
                 </div>
             </div>
-            {!completed ? <button className="pl-8 text-magenta">Mark as done</button> : null}
+            {!completed ? <button className="pl-8 text-magenta" >Mark as done</button> : null}
             <hr />
         </div>
     )
