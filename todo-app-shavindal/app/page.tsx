@@ -1,7 +1,33 @@
-export default function Home() {
+import ActivityFeed from "./components/activity-feed";
+import Header from "./components/header";
+import CustomPieChart from "./components/piechart";
+import Sidebar from "./components/sidebar";
+import Tasks from "./components/tasks";
+import Welcome from "./components/welcome";
+
+const Dashboard: React.FC = () => {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h2 className="font-inter  text-h3">Dashboard</h2>
+    <main className="font-inter">
+      <div className="flex">
+        {/* <Sidebar /> */}
+        {/* <Welcome /> */}
+        {/* <ActivityFeed /> */}
+        <Sidebar />
+        <div className="w-full">
+          <Header />
+          <Welcome />
+          <div className="flex w-full p-6">
+            <Tasks />
+            <div>
+              <ActivityFeed />
+              <CustomPieChart />
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
+
   )
 }
+
+export default Dashboard;
