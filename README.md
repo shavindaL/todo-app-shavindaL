@@ -50,6 +50,8 @@ This project was created as part of betalaunch's intern software engineer assign
 6. Open your web browser and visit http://localhost:3000 to access the To-Do Dashboard.
 
 ---
+## Demo
+[Link to Live Demo](https://vercel.com/shavindal/todo-app-shavinda-l/8Ed5F2ZaVhpSx7ctpPL14jHK9iaN)
 
 ### Dashboard UI - Mockup
 
