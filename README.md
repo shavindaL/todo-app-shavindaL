@@ -34,7 +34,7 @@ This project was created as part of betalaunch's intern software engineer assign
 
 3. Navigate to the project direc
     ```
-    cd beta-launch-assignment\todo-app-shavindal
+    cd todo-app-shavindalL-main\todo-app-shavindal
     ```
 
 4. Install dependencies:
