@@ -17,11 +17,11 @@ const Dashboard: React.FC = () => {
           <div className="flex w-full p-6">
             <TaskListContextProvider>
               <Tasks />
-            </TaskListContextProvider>
-            <div>
-              <ActivityFeed />
-              <CustomPieChart />
-            </div>
+              <div>
+                <ActivityFeed />
+                <CustomPieChart />
+              </div>
+            </TaskListContextProvider>        
           </div>
         </div>
       </div>

@@ -19,7 +19,7 @@ const TaskItem: React.FC<ITask> = ({ id, createdBy, priority, todo, completed, c
             break;
     };
     return (
-        <div key={id} className="py-2 px-4">
+        <div key={id} className="py-1 px-4">
             <div className="flex justify-between items-center ">
                 <div className="flex items-center">
                     <Image src={priorityImage} alt={""} width={20} height={20} />
@@ -33,6 +33,7 @@ const TaskItem: React.FC<ITask> = ({ id, createdBy, priority, todo, completed, c
                 </div>
             </div>
             {!completed ? <button className="pl-8 text-magenta">Mark as done</button> : null}
+            <hr />
         </div>
     )
 };
