@@ -4,24 +4,24 @@ import CustomPieChart from "./components/piechart";
 import Sidebar from "./components/sidebar";
 import Tasks from "./components/tasks";
 import Welcome from "./components/welcome";
+import TaskListContextProvider from "./context/TaskListContext";
 
 const Dashboard: React.FC = () => {
   return (
     <main className="font-inter">
       <div className="flex">
-        {/* <Sidebar /> */}
-        {/* <Welcome /> */}
-        {/* <ActivityFeed /> */}
         <Sidebar />
         <div className="w-full">
           <Header />
           <Welcome />
           <div className="flex w-full p-6">
-            <Tasks />
-            <div>
-              <ActivityFeed />
-              <CustomPieChart />
-            </div>
+            <TaskListContextProvider>
+              <Tasks />
+              <div>
+                <ActivityFeed />
+                <CustomPieChart />
+              </div>
+            </TaskListContextProvider>        
           </div>
         </div>
       </div>
