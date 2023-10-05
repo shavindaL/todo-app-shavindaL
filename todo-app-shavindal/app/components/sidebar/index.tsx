@@ -9,7 +9,7 @@ const Sidebar: React.FC = () => {
             <div className="sidebar-header">
                 <p className="h3 h-min content-center justify-center items-center">Acmy Solutions</p>
             </div>
-            <div className="my-20">
+            <div className="my-16">
                 <Link href="/">
                     <SidebarPill />
                 </Link>

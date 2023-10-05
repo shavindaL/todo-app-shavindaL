@@ -16,7 +16,7 @@ const Dashboard: React.FC = () => {
         <div className="w-full">
           <Header />
           <Welcome />
-          <div className="flex w-full">
+          <div className="flex w-full p-6">
             <Tasks />
             <div>
               <ActivityFeed />

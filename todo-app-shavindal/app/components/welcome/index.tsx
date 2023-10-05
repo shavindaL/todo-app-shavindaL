@@ -9,7 +9,7 @@ const Welcome: React.FC = () => {
     const headingText: string = "Welcome back, John Doe";
     const subHeadingText: string = "The end of the year is coming. Are you planning your performance interviews? You can do this super efficiently with Acmy.";
     return (
-        isClosed ? null : <div className="welcome">
+        isClosed ? null : <div className="welcome m-6">
             <div className="welcome-text">
                 <h1 className="h3">{headingText}</h1>
                 <p className="flex ">
