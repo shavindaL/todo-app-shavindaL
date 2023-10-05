@@ -11,19 +11,19 @@ const Welcome: React.FC = () => {
     return (
         isClosed ? null : <div className="welcome m-6">
             <div className="welcome-text">
-                <h1 className="h3">{headingText}</h1>
-                <p className="flex ">
+                <h1 className="h3 w-max">{headingText}</h1>
+                <p className="flex">
                     {subHeadingText}
 
                 </p>
                 <Link href={"/"}>
-                    <p>Look here for more information</p>
+                    <p className='w-max'>Look here for more information</p>
                 </Link>
             </div>
             <div className='flex'>
                 <Image src={"/assets/Vector.svg"} alt={""} width={167} height={179} />
                 <button onClick={() => setIsClosed(true)}>
-                    <Image src={"/assets/Close.svg"} alt={""} width={24} height={24} />
+                    <Image src={"/assets/Close.svg"} alt={"close button"} width={24} height={24} />
                 </button>
             </div>
         </div>

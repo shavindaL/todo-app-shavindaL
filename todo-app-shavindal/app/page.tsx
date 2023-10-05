@@ -9,9 +9,6 @@ const Dashboard: React.FC = () => {
   return (
     <main className="font-inter">
       <div className="flex">
-        {/* <Sidebar /> */}
-        {/* <Welcome /> */}
-        {/* <ActivityFeed /> */}
         <Sidebar />
         <div className="w-full">
           <Header />
