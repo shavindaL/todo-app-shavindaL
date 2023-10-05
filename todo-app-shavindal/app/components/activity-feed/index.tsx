@@ -2,40 +2,28 @@
 import { TaskListContext } from "@/app/context/TaskListContext";
 import ActivityFeedItem from "./ActivityFeedItem";
 import { useContext } from "react";
+import { CircularProgress } from "@mui/material";
 
 const ActivityFeed: React.FC = () => {
     const taskContext = useContext(TaskListContext);
-    // const { tasks, isLoading } = taskContext!;
+    const { tasks, isLoading } = taskContext!;
 
-    const activityData = [
-        {
-            username: 'Kushantha Charuka',
-            task: 'Contract #00124 need John Beige’s signature',
-            date: 'Sep 16, 2022 at 11:30 AM',
-            avatarImage: '/assets/Avatar-1.svg'
-        },
-        {
-            username: "Alice Johnson",
-            task: "Contract #00125 need Sarah White's signature",
-            date: "Oct 10, 2023 at 2:45 PM",
-            avatarImage: '/assets/Avatar-2.svg',
-        }
-        ,
-        {
-            username: "Alice Johnson",
-            task: "Contract #00125 need Sarah White's signature",
-            date: "Oct 10, 2023 at 2:45 PM",
-            avatarImage: '/assets/Avatar-2.svg'
-        }
-
-    ];
     return (
-        <div className="border-solid border-2 border-stroke rounded-lg w-full h-max py-2">
+        <div className="border-solid border-2 border-stroke rounded-lg w-full max-h-96 h-96 py-2">
             <div className="flex items-center py-2 px-4">
                 <h1 className="font-medium text-large w-max ">Activity Feed</h1>
             </div>
             <hr />
-            {activityData?.map((activity) => ActivityFeedItem(activity))}
+            {
+                isLoading ?
+                    <div className="flex justify-center items-center h-full">
+                        <CircularProgress />
+                    </div>
+                    : <div className="overflow-auto h-5/6 ">
+                        {tasks?.map((activity) => ActivityFeedItem(activity))}
+                    </div>
+            }
+
         </div>
     )
 };

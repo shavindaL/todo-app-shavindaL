@@ -1,9 +1,8 @@
 'use client'
-import { ITask } from "@/app/interfaces/ITasks";
+import { ITask, ITaskListItemProps } from "@/app/interfaces/ITasks";
 import Image from "next/image"
-import { useEffect, useState } from "react";
 
-const TaskItem: React.FC<ITask> = ({ id, createdBy, priority, todo, completed, createdAt }) => {
+const TaskItem: React.FC<ITaskListItemProps> = ({ id, createdBy, priority, todo, completed, date, month }) => {
     let priorityImage = "";
     switch (priority) {
         case "LOW":
@@ -31,7 +30,7 @@ const TaskItem: React.FC<ITask> = ({ id, createdBy, priority, todo, completed, c
                     {completed ?
                         <div className="bg-light-green py-1 px-2 rounded-2xl text-green mx-2 w-max"><p className="w-max">Done</p></div>
                         : <div className="bg-light-yellow py-1 px-2 rounded-2xl text-yellow mx-2 "><p className="w-max">In-Progress</p></div>}
-                    <p className="w-max text-grey">{createdAt}</p>
+                    <p className="w-max text-grey">{`${date} ${month}`}</p>
                 </div>
             </div>
             {!completed ? <button className="pl-8 text-magenta" >Mark as done</button> : null}
