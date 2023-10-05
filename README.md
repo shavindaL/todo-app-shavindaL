@@ -51,7 +51,7 @@ This project was created as part of betalaunch's intern software engineer assign
 
 ---
 ## Demo
-[Link to Live Demo](https://vercel.com/shavindal/todo-app-shavinda-l/8Ed5F2ZaVhpSx7ctpPL14jHK9iaN)
+[Link to Live Demo](https://todo-app-shavinda-e8j6jpm4a-shavindal.vercel.app/)
 
 ### Dashboard UI - Mockup
 
